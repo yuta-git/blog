@@ -1,0 +1,15 @@
+<div class="index-wrapper">
+  <div class="container">
+    <h1 class="section-title"><%= @nickname %>さんの投稿一覧</h1>
+    <% @posts.each do |post| %>
+     <%= render partial: "user", locals: { post: post } %>
+    <% end %>
+    
+     <h2 class="ranking">★<%= @nickname %>さんがコメント済みの投稿一覧★</h2>
+    <% if @commented_posts.present? %>
+     <% @commented_posts.each do |commented_post| %>
+       <%= render partial: 'users/post', locals: { commented_post: commented_post } %>
+     <% end %>
+    <% end %>
+  </div>
+</div>

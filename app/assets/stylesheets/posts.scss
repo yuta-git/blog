@@ -1,0 +1,211 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+*{
+  box-sizing: border-box;
+}
+
+header{
+  height: 60px;
+  background-color: #BAD3FF;
+  color: #FFFF00;
+  
+}
+
+header .blog{
+  float: left;
+  letter-spacing: 3px;
+  line-height: 60px;
+  margin-left: 10px;
+  color: #FFFF00;
+  text-decoration: none; 
+  font-size: 2em;
+}
+
+header span{
+  color: gray;
+  line-height: 60px;
+}
+
+footer{
+  background-color: #FFFFEE;
+  height: 40px;
+}
+
+footer p{
+  color: gray;
+  text-align: center;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.index-wrapper{
+  height: 100%;
+  text-align: center;
+  background-color: #FFFFEE;
+  min-height: 480px;
+}
+
+.index-content{
+  word-wrap: break-word;
+  border: 1px solid silver;
+  background-color: white;
+  width: 60%;
+  margin: 20px auto;
+  height: 100%;
+  min-height: 100px;
+}
+
+.show-wrapper{
+  height: 100%;
+  text-align: center;
+  background-color: #FFFFEE;
+  min-height: 480px;
+}
+
+.show-content{
+  word-wrap: break-word;
+  border: 1px solid silver;
+  background-color: white;
+  width: 80%;
+  margin: 20px auto;
+  height: 100%;
+  min-height: 200px;
+}
+
+.post-wrapper{
+ height: calc(100vh - 100px);
+ text-align: center;
+ background-color: #FFFFEE;
+ min-height: 480px;
+}
+  
+.txt-content{
+  color: gray;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.name{
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+  margin-right: 520px;
+}
+
+
+.btn{
+  text-decoration: none; 
+  margin: 0px 10px;
+   float: right;
+   line-height: 60px;
+   color: gray;
+   
+}
+
+.btn:hover{
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.submit-btn{
+  color: gray;
+   padding: 5px 10px;
+   font-size: 20px;
+}
+
+.submit-btn:hover{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.detail{
+  color: gray;
+  margin-left: 500px;
+}
+
+.detail:hover{
+  background-color: silver;
+}
+
+.edit-btn{
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.edit-btn:hover{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.comment-txt{
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.new-comment-txt{
+  border: 1px solid silver;
+  background-color: white;
+  margin: 0 auto;
+  height: 500px;
+  width: 800px;
+}
+
+.comment-name{
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+}
+
+h4{
+  letter-spacing: 8px;
+}
+
+.section-title{
+ letter-spacing: 8px 
+}
+
+.root-btn{
+  text-decoration: none; 
+  color: gray;
+  padding: 20px 10px;
+}
+
+.field-txt{
+   border: 1px solid silver;
+}
+
+input{
+  border: 1px solid silver;
+}
+
+.actions{
+    color: gray;
+   padding: 5px 10px;
+   font-size: 20px;
+  
+}
+
+.sessions{
+   color: gray;
+   padding: 5px 10px;
+   font-size: 20px;
+}
+
+.ranking{
+  width: 100%;
+  color: silver;
+  margin: 10px 0;
+}
+
+.ranking-bottom{
+  padding-bottom: 10px;
+}

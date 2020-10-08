@@ -1,0 +1,28 @@
+<div class="index-wrapper">
+  <div class="container">
+    <h1 class="section-title">コメントの多い投稿一覧</h1>
+     <% @posts.each do |post| %>
+       <div class="index-content">
+         <div class="txt-content">
+            <div class="name">
+              <span><%= post.user.nickname %> さんの投稿</span>
+            </div>
+           <p><%= post.text %></p>
+         </div>
+        <div class="txt-content">
+           <% post.comments.each do |comment| %>
+             <div class="name">
+              <span><%= comment.user.nickname %> さんのコメント</span>
+            </div>
+             <p><%= comment.text %></p>
+           <% end %>
+        </div> 
+       </div>  
+     <% end %>
+  </div>
+</div>
+
+
+
+
+

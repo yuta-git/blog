@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>blog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <header>
+     <%= link_to "blog", root_path, class: 'blog' %><span>掲示板</span>
+     <% if user_signed_in? %>
+      　<%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn' %>
+      　<%= link_to "投稿する", new_post_path, class: 'btn' %>
+      　<%= link_to "マイページ", user_path(current_user), class: 'btn' %>
+      　<%= link_to "コメント順", "/posts/:post_id/comments", class: 'btn' %>
+     <% else %>
+        <%= link_to "ログイン", new_user_session_path, class: 'btn' %>
+        <%= link_to "新規登録", new_user_registration_path, class: 'btn' %>
+      <% end %>
+       
+   </header>
+    <%= yield %>
+   <footer>
+    <p>(c)blog 2020</p> 
+   </footer>  
+  </body>
+</html>

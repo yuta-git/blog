@@ -1,0 +1,11 @@
+<div class="post-wrapper">
+  <div class="container">
+  <%= form_tag("/posts/#{@post.id}", method: :patch ) do %>
+    <h1 class="section-title">
+      編集画面
+    </h1>
+    <textarea class="comment-txt" name="text" placeholder="text" rows="15" cols="60"><%= @post.text %></textarea>
+    <input class="submit-btn" type="submit" value="編集する">
+  <% end %>
+ </div>
+</div>

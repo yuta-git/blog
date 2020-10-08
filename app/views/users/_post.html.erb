@@ -1,0 +1,14 @@
+<div class="index-content">
+  <div class="txt-content"> 
+    <div class="name">
+      <p><%= commented_post.user.nickname %>さんの投稿</p>
+    </div>
+    <%= commented_post.text %>
+    <div class="txt-content">
+    <div class="name">  
+      <p><%= @nickname %>さんのコメント</p>
+    </div> 
+      <p><%= commented_post.user_comment(@user.id).text %></p>
+    </div>
+  </div>
+</div>   

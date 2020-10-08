@@ -1,0 +1,9 @@
+<div class="post-wrapper">
+  <div class="container">
+  <%= form_for(@post) do |f| %>
+    <h1 class="section-title">新規投稿画面</h1> 
+    <%= f.text_field :text, placeholder: "text", class: "new-comment-txt" %>
+    <%= f.submit "投稿する", class: "submit-btn" %>
+  <% end %>
+  </div>
+</div>

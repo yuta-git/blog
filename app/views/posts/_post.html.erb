@@ -1,0 +1,10 @@
+<div class="index-content">
+  <div class="name">
+    <span><%= post.user.nickname %> さん</span>
+  </div>
+  <div class="txt-content">
+   <%= simple_format(post.text) %>
+  </div>
+    <%= link_to 'more', post_path(post), class: 'submit-btn' %>
+    <%= link_to "コメント#{post.comments.count}件", "/posts/#{post.id}", method: :get, class: 'detail' %>
+</div>

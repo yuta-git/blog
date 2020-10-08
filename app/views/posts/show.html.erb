@@ -1,0 +1,28 @@
+<div class="show-wrapper">
+ <div class="container">
+  <h1 class="section-title"><%= @post.user.nickname %> さんの投稿</h1> <a class="root-btn" href="/">投稿一覧へ戻る</a>
+    <div class="show-content">
+      <%= simple_format(@post.text) %>
+      <% if user_signed_in? %>
+       <%= link_to '編集', edit_post_path(@post), class: 'edit-btn' %>
+       <%= link_to '削除', post_path(@post), method: :delete, class: 'edit-btn' %>
+      <% end %>
+    </div>
+    <% if current_user %>
+      <%= form_tag("/posts/#{@post.id}/comments", method: :post) do %>
+        <textarea class="comment-txt" name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+        <input class="submit-btn" type="submit" value="送信">
+      <% end %>
+    <% end %>
+    
+    <h2 class="ranking">★コメント一覧★</h2>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <div class="ranking-bottom">
+           <%= comment.user.nickname %>
+          「<%= comment.text %>」
+          </div>
+        <% end %>
+      <% end %>
+ </div> 
+</div>
